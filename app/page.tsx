@@ -42,8 +42,8 @@ export default function Home() {
         <Header />
         
         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] h-full p-6 md:p-8 lg:p-12 gap-6">
-          <div className="flex flex-col justify-between h-full lg:pr-8 order-2 lg:order-1">
-            <div className="flex-1 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-purple-600 scrollbar-track-transparent mb-6">
+          <div className="flex flex-col justify-between min-h-[400px] h-full lg:pr-8 order-2 lg:order-1">
+            <div className="flex-1 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-purple-600 scrollbar-track-transparent mb-6 max-h-[calc(100%-60px)]">
               {renderSection()}
             </div>
             
