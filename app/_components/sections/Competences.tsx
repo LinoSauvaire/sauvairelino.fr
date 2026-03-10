@@ -1,8 +1,8 @@
 export default function Competences() {
   const skills = {
-    "Frontend": ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-    "Backend": ["Java", "Node.js", "Spring Boot", "Express"],
-    "Database": ["PostgreSQL", "Prisma", "MongoDB"],
+    "Frontend": ["Next.js", "React", "TypeScript", "Tailwind CSS", "HTML", "CSS", "WinUI"],
+    "Backend": ["Java", "Node.js", "Spring Boot", "Express", "Prisma", "Laravel", ".NET"],
+    "Database": ["PostgreSQL", "MongoDB", "MariaDB", "MySQL"],
     "DevOps": ["Docker", "Git", "CI/CD"]
   };
 

@@ -1,15 +1,15 @@
 export default function Experiences() {
   const experiences = [
     {
-      title: "Développeur Fullstack Senior",
-      company: "Tech Corp",
-      period: "2023 - Présent",
-      description: "Développement d'applications web avec Next.js et PostgreSQL"
+      title: "Alternant Développeur Fullstack",
+      company: "Tremplin",
+      period: "2024 - Présent",
+      description: "Développement d'applications web avec Next.js et PostgreSQL et Laravel"
     },
     {
-      title: "Développeur Backend",
-      company: "StartUp Inc",
-      period: "2021 - 2023",
+      title: "Stage développeur Java",
+      company: "SmartTrade Technologies",
+      period: "2021",
       description: "Architecture et développement d'APIs REST avec Java et Spring Boot"
     }
   ];
