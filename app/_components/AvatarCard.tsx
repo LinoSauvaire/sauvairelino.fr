@@ -3,7 +3,7 @@ import TechBadges from "./TechBadges";
 
 export default function AvatarCard() {
   return (
-    <div className="relative h-full rounded-[16px] md:rounded-[22px] overflow-hidden group">
+    <div className="relative flex w-full h-full rounded-[16px] md:rounded-[22px] lg:rounded-l-[28px] lg:rounded-r-[28px] overflow-hidden group">
       <Image
         src="/avatar.jpg"
         alt="Lino Sauvaire"

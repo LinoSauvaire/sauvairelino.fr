@@ -5,6 +5,7 @@ import Header from "./_components/Header";
 import Navigation from "./_components/Navigation";
 import AvatarCard from "./_components/AvatarCard";
 import TechStack from "./_components/TechStack";
+import ContactModal from "./_components/ContactModal";
 
 import Accueil from "./_components/sections/Accueil";
 import Resume from "./_components/sections/Resume";
@@ -16,6 +17,7 @@ type Section = "accueil" | "resume" | "experiences" | "competences" | "projects"
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<Section>("accueil");
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const renderSection = () => {
     switch (activeSection) {
@@ -41,8 +43,8 @@ export default function Home() {
       <div className="relative w-full max-w-[1100px] h-auto md:h-[520px] bg-[#0B0B0F] rounded-[20px] md:rounded-[28px] shadow-[0_20px_60px_rgba(0,0,0,0.6)] border border-white/5 overflow-hidden">
         <Header />
         
-        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] h-full p-6 md:p-8 lg:p-12 gap-6">
-          <div className="flex flex-col justify-between min-h-[400px] h-full lg:pr-8 order-2 lg:order-1">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] h-full lg:h-full">
+          <div className="flex flex-col justify-between min-h-[400px] h-full p-6 md:p-8 lg:pl-12 lg:pt-12 lg:pb-12 lg:pr-8 order-2 lg:order-1">
             <div className="flex-1 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-purple-600 scrollbar-track-transparent mb-6 max-h-[calc(100%-60px)]">
               {renderSection()}
             </div>
@@ -50,16 +52,22 @@ export default function Home() {
             <Navigation 
               activeSection={activeSection} 
               onSectionChange={setActiveSection}
+              onContactClick={() => setIsContactModalOpen(true)}
             />
           </div>
 
-          <div className="order-1 lg:order-2 h-[300px] md:h-[400px] lg:h-full">
+          <div className="order-1 lg:order-2 h-[400px] md:h-[500px] lg:h-full lg:w-[350px] relative">
             <AvatarCard />
           </div>
         </div>
       </div>
       
       <TechStack />
+      
+      <ContactModal 
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+      />
     </div>
   );
 }
